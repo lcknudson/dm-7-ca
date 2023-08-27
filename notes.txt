@@ -1,8 +1,17 @@
 Step 1: 
 
-2. Results for the extraLargeArray
+2. 
+Results for the extraLargeArray
 insert 1.1692951 s
 append 2.9628 ms
+
+The insert/unshift one over 1000x longer a process
+than the append/push function. 
+
+
+
+3. Results for tinyArray, smallArray, 
+mediumArray, largeArray, and extraLargeArray.
 
 Results for the tinyArray
 insert 4.2 μs
@@ -11,3 +20,33 @@ append 22.5 μs
 Results for the smallArray
 insert 9.6 μs
 append 6.2 μs
+
+Results for the mediumArray
+insert 172.2 μs
+append 36.4 μs
+
+Results for the largeArray
+insert 9.9939 ms
+append 127 μs
+
+Results for the extraLargeArray
+insert 1.1692951 s
+append 2.9628 ms
+
+See the image names "Function graph.png" for the visual
+graph of these data points
+
+4. 
+The insert or "unshift" grows exponentially, with the
+extraLargeArray being 1000x longer to produce a results
+compated to the append/push function. The push function
+will scale much better unless there is some other business or
+programatic reason to use the unshift method. 
+
+5. 
+The push addes to the end and doesn't need to reallocate memory, 
+it just add a 'plus' to a copy-over of the array. 
+The unshift method adds to the start of the array and has
+to re-allocate all the memory locations of the array so that 
+the new item is at the beginning of the array prior to copying
+over the prior data. 

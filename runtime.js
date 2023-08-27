@@ -101,3 +101,43 @@ let resultsInsertSmall = perf.stop();
 console.log('Results for the smallArray');
 console.log("insert", resultsInsertSmall.preciseWords);
 console.log("append", resultsAppendSmall.preciseWords, `\n`);
+
+//Section mediumArray
+// How long does it take to double every number in a given 
+// array? 
+
+// Try it with first function
+perf.start();                     // Starts timer
+doublerAppend(mediumArray);
+let resultsAppendMedium = perf.stop();  // Stops timer and save time results
+
+
+// Try it with second function
+perf.start();
+doublerInsert(mediumArray);
+let resultsInsertMedium = perf.stop();
+
+
+console.log('Results for the mediumArray');
+console.log("insert", resultsInsertMedium.preciseWords);
+console.log("append", resultsAppendMedium.preciseWords, `\n`);
+
+//Section largeArray
+// How long does it take to double every number in a given 
+// array? 
+
+// Try it with first function
+perf.start();                     // Starts timer
+doublerAppend(largeArray);
+let resultsAppendLarge = perf.stop();  // Stops timer and save time results
+
+
+// Try it with second function
+perf.start();
+doublerInsert(largeArray);
+let resultsInsertLarge = perf.stop();
+
+
+console.log('Results for the largeArray');
+console.log("insert", resultsInsertLarge.preciseWords);
+console.log("append", resultsAppendLarge.preciseWords, `\n`);
