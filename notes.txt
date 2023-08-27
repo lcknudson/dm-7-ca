@@ -1,0 +1,13 @@
+Step 1: 
+
+2. Results for the extraLargeArray
+insert 1.1692951 s
+append 2.9628 ms
+
+Results for the tinyArray
+insert 4.2 μs
+append 22.5 μs
+
+Results for the smallArray
+insert 9.6 μs
+append 6.2 μs
